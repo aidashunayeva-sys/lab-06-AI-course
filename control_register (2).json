@@ -1,0 +1,52 @@
+{
+  "harness_controls": [
+    "validate_input",
+    "blind",
+    "refuse",
+    "log",
+    "escalate"
+  ],
+  "format_problems": [],
+  "entries": [
+    {
+      "control": "validate_input",
+      "principle": "Proportionality and do no harm",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), Principle 25",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection, No. 94-V",
+      "provision": "Article 7(8)-(9)",
+      "why_here": "Input validation prevents impossible values from being processed; this is a prototype benchmark and the measured run showed no parsing failures."
+    },
+    {
+      "control": "blind",
+      "principle": "Fairness and non-discrimination",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), Principle 28",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection, No. 94-V",
+      "provision": "Article 7(8)-(9)",
+      "why_here": "Names and universities are hidden because the experiment observed decision flips and score differences for irrelevant profile details; the measured effects were uncertain."
+    },
+    {
+      "control": "refuse",
+      "principle": "Proportionality and do no harm",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), Principle 25",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection, No. 94-V",
+      "provision": "Article 19-1(1)-(3)",
+      "why_here": "The system refuses inappropriate purposes, minors, missing consent, invalid data and prompt-injection-like names to avoid unsafe or unauthorized processing."
+    },
+    {
+      "control": "log",
+      "principle": "Responsibility and accountability",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), Principle 42-43",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection, No. 94-V",
+      "provision": "Article 22",
+      "why_here": "The log records decisions and controls so a reviewer can reconstruct the process and investigate possible unfair outcomes."
+    },
+    {
+      "control": "escalate",
+      "principle": "Human oversight and determination",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), Principle 35-36",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection, No. 94-V",
+      "provision": "Article 19-1(2)-(3)",
+      "why_here": "Borderline and inconsistent decisions go to a human because automated screening can affect an applicant's legitimate interests."
+    }
+  ]
+}
